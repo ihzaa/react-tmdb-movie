@@ -13,13 +13,12 @@ const Navbar = () => {
     <Box sx={{ display: 'flex' }}>
       <AppBar component="nav">
         <Toolbar>
-          <MovieFilter sx={{ display: 'flex', mr: 1 }} />
+          <MovieFilter sx={{ mr: 1 }} />
           <Typography
             variant="h6"
             component="div"
             sx={{
               flexGrow: 1,
-              display: 'block',
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
@@ -27,7 +26,7 @@ const Navbar = () => {
           >
             NONTON
           </Typography>
-          <Box sx={{ display: 'block' }}>
+          <Box>
             {navItems.map((item) => (
               <Button key={item} sx={{ color: '#fff' }}>
                 {item}
