@@ -8,24 +8,15 @@ import { ThemeProvider } from '@mui/material';
 
 import Navbar from './components/Navbar';
 import theme from './themes/theme';
-import { MovieCard } from './components/MovieCard';
-import { Box } from '@mui/system';
 
-import movieData from './data/movies.json'
-import { useState } from 'react';
+import MovieList from './containers/MovieList';
 
 const App = () => {
-  const [movies, setMovies] = useState(movieData.results);
-
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
         <Navbar></Navbar>
-        <Box sx={{ marginTop: '64px' }}>
-          {
-            movies.map(movie => <MovieCard movie={movie} />)
-          }
-        </Box>
+        <MovieList />
       </div>
     </ThemeProvider>
   );
